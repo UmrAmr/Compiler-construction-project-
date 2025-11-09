@@ -1,0 +1,123 @@
+
+
+
+===========================================
+15 UNIQUE KEYWORDS
+===========================================
+1.  Shuru    - Main function start (شروع = Begin)
+2.  Khatam   - Return statement (ختم = End)
+3.  Agar     - If conditional (اگر = If)
+4.  Warna    - Else statement (ورنہ = Otherwise)
+5.  Jabtak   - While loop (جب تک = Until)
+6.  Har      - For loop (ہر = Every)
+7.  Adad     - Integer type (عدد = Number)
+8.  Haqiqi   - Float type (حقیقی = Real)
+9.  Lafz     - String type (لفظ = Word)
+10. Sach     - Boolean true (سچ = Truth)
+11. Jhoot    - Boolean false (جھوٹ = False)
+12. Dikhaao  - Print function (دکھاؤ = Show)
+13. Padho    - Input function (پڑھو = Read)
+14. Tawaquf  - Break statement (توقف = Pause)
+15. Jari     - Continue statement (جاری = Continue)
+
+===========================================
+5 CUSTOM OPERATORS
+===========================================
+1. <--   Assignment (unique left-arrow design)
+2. ==    Equality comparison
+3. !=    Not equal comparison
+4. ++    Increment operator
+5. &&    Logical AND
+
+===========================================
+4 CUSTOM PUNCTUATIONS
+===========================================
+1. {     Block start
+2. }     Block end
+3. ::    Scope resolution (C++ style)
+4. ;     Statement terminator
+
+===========================================
+FILES INCLUDED
+===========================================
+1. scanner.l         - Flex lexical analyzer source
+2. test_program.txt  - Test program (43 lines)
+3. tokens.txt        - Token output file
+4. errors.txt        - Error log file
+5. README.txt        - This file
+
+===========================================
+COMPILATION & EXECUTION
+===========================================
+
+Step 1: Generate C code from Flex
+    $ flex scanner.l
+
+Step 2: Compile with GCC
+    $ gcc lex.yy.c -o scanner -ll
+    (or use -lfl if -ll doesn't work)
+
+Step 3: Run the scanner
+    $ ./scanner test_program.txt
+
+Step 4: View outputs
+    $ cat tokens.txt
+    $ cat errors.txt
+
+===========================================
+TOKEN STATISTICS
+===========================================
+Total Lines in Test Program: 43
+Total Tokens Recognized: ~180
+Total Errors Found: 1 (intentional @ symbol)
+
+Keywords Found: 25+
+Operators Found: 30+
+Identifiers Found: 20+
+Numbers Found: 15+
+Punctuations Found: 70+
+
+===========================================
+UNIQUE FEATURES
+===========================================
+✓ Cultural representation through Urdu keywords
+✓ Professional error handling with line tracking
+✓ Comprehensive token classification
+✓ Support for multiple number formats (int, float, exponential)
+✓ String and character literal recognition
+✓ Exceeds minimum requirements (43 lines vs 20 required)
+
+===========================================
+TESTING
+===========================================
+The test program includes:
+- All 15 keywords in use
+- All 5 operators demonstrated
+- All 4 punctuations used
+- Integer numbers (0, 10, 5, etc.)
+- Float numbers (0.0, 3.14159)
+- Exponential notation (3.14e2)
+- String literals ("Calculating sum")
+- Character literals ('A')
+- Nested control structures
+- Intentional error for demo (@invalid_token)
+
+===========================================
+DESIGN RATIONALE
+===========================================
+I chose Urdu keywords to celebrate cultural diversity
+in programming while maintaining readability. Each
+keyword is a transliteration of an Urdu word that
+naturally represents its programming concept:
+
+- "Shuru" (Begin) for main function entry
+- "Adad" (Number) for integer type
+- "Sach" (Truth) for boolean true
+
+This design makes programming more accessible to
+Urdu speakers while introducing non-Urdu speakers
+to another language and culture.
+
+===========================================
+END OF README
+===========================================
